@@ -3,7 +3,7 @@ import { createInertiaApp } from "@inertiajs/react";
 import type { ElementType } from "react";
 
 createInertiaApp({
-    title: (title: string) => title ? `${title} - BlogPostly` : 'BlogPostly - Turn Ideas Into Stories',
+    title: (title: string) => title ? `${title} - BlogPostly` : 'BlogPostly - Where your ideas matter',
     resolve: (name: string) => {
         const pages = import.meta.glob("./Pages/**/*.tsx", {
             eager: true,
@@ -25,7 +25,7 @@ createInertiaApp({
     }: {
         el: HTMLElement;
         App: ElementType;
-        props: any;
+        props: Record<string, unknown>;
     }) {
         createRoot(el).render(<App {...props} />);
     },
