@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\SignupController;
+use App\Http\Controllers\User\ExploreController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -11,3 +12,5 @@ Route::get('/', function () {
 
 Route::get('/auth/signup', [SignupController::class, 'create']);
 Route::get('/auth/login', [LoginController::class, 'create']);
+
+Route::get('/explore', [ExploreController::class, 'index']);
