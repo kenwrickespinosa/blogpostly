@@ -18,7 +18,7 @@ function UserLayout({ children, title }: UserLayoutProps) {
                 <UserTopbar />
             </header>
 
-            <main className="h-full bg-red-200 pt-10 md:pt-20 md:ml-40 md:mr-20">
+            <main className="min-h-dvh pt-10 pb-10 md:pt-20 md:ml-60 md:mr-20">
                 {children}
             </main>
         </div>
