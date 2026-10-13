@@ -14,7 +14,7 @@ function UserLayout({ children, title }: UserLayoutProps) {
                 <title>{title}</title>
             </Head>
 
-            <header className="absolute z-20 w-full bg-background">
+            <header className="fixed z-20 w-full bg-background">
                 <UserTopbar />
             </header>
 
