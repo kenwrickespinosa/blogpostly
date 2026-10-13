@@ -1,12 +1,11 @@
 import { ThumbsUp, MessageCircle } from "lucide-react";
 import Button from "../Button.js";
+import { Link } from "@inertiajs/react";
+import type { Post } from "../../types/post.ts";
+import { route } from "ziggy-js";
 
 type PostCardProps = {
-    data: {
-        name: string;
-        title: string;
-        content: string;
-    };
+    data: Post;
 };
 
 function PostCard({ data }: PostCardProps) {
@@ -19,9 +18,11 @@ function PostCard({ data }: PostCardProps) {
         >
             {/* Author and date */}
             <div className="mb-3 flex shrink-0 min-w-0 items-center justify-between gap-2">
-                <p className="truncate text-xs font-medium">
-                    {data.name}
-                </p>
+                <Link>
+                    <p className="truncate text-xs font-medium">
+                        {data.user.name}
+                    </p>
+                </Link>
 
                 <p className="shrink-0 text-[0.75rem] text-muted-foreground">
                     Sep 09, 2026
@@ -83,11 +84,22 @@ function PostCard({ data }: PostCardProps) {
                 </div>
             </div>
 
-            {/* Category */}
-            <div className="shrink-0 pt-2">
-                <p className="text-xs text-muted-foreground">
-                    #Technology
-                </p>
+            <div className="flex justify-between items-center">
+                {/* Category */}
+                <div className="shrink-0">
+                    <p className="text-xs text-muted-foreground">#Technology</p>
+                </div>
+
+                <Link
+                    href={route("posts.show", {
+                        user: data.user.slug,
+                        post: data.slug,
+                    })}
+                    component="User/Post/Show"
+                    className="border border-accent bg-accent text-white rounded-lg px-4"
+                >
+                    Read
+                </Link>
             </div>
         </article>
     );

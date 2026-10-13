@@ -8,8 +8,6 @@ const NAV_ITEMS = [
 function UserTopbar() {
     const { url } = usePage();
 
-    console.log(url);
-
     return (
         <div className="flex justify-between items-center border-b border-b-accent md:px-20 md:py-4">
             <p>BlogPostly</p>
