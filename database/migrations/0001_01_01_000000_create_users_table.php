@@ -15,10 +15,12 @@ return new class extends Migration
             $table->uuid('id')->primary();
 
             $table->string('name');
-            $table->enum('role', ['admin', 'member']);
+            $table->string('reference_id')->unique();
+            $table->enum('role', ['admin', 'member'])->default('member');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('slug')->unique();
 
             $table->rememberToken();
             $table->softDeletes();

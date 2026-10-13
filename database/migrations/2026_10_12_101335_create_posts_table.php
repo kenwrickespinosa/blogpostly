@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('content');
             $table->string('thumbnail')->nullable();
             $table->enum('status', ['draft', 'published'])->default('draft');
+            $table->string('slug')->unique();
 
             $table->softDeletes();
             $table->timestamps();
