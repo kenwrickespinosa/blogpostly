@@ -1,15 +1,22 @@
 type TextInputProps = {
     className?: string;
+    maxLength?: number;
+    placeholder?: string;
 };
 
-function TextInput({ className }: TextInputProps) {
+function TextInput({
+    className,
+    maxLength = 120,
+    placeholder,
+}: TextInputProps) {
     return (
         <input
-            maxLength={120}
+            maxLength={maxLength}
             autoComplete="off"
             autoCorrect="off"
             autoCapitalize="off"
             spellCheck="false"
+            placeholder={placeholder}
             className={`border border-black/40 
               focus-visible:outline-accent
               focus-visible:outline-offset-2
