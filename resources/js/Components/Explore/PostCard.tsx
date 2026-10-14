@@ -76,11 +76,12 @@ function PostCard({ data }: PostCardProps) {
                     rounded-md bg-muted md:h-28 md:w-40
                     lg:h-32 lg:w-50"
                 >
-                    <img
-                        src="/images/adobo.jpg"
+                    {/* <img
+                        src={null}
                         alt="Bisaya-style chicken adobo"
                         className="h-full w-full object-cover"
-                    />
+                    /> */}
+                    <div className="h-full w-full object-cover border" />
                 </div>
             </div>
 
