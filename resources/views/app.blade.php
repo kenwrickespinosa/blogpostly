@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @viteReactRefresh
     @routes
-    @vite(['resources/css/app.css', 'resources/js/app.tsx'])
+    @vite(['resources/css/app.css', 'resources/css/styles.css', 'resources/js/app.tsx'])
     <x-inertia::head />
 </head>
 
