@@ -24,9 +24,15 @@
         "vite": "^8.3.4"
     },
     "dependencies": {
+        "@tiptap/extension-underline": "^3.32.0",
+        "@tiptap/extensions": "^3.32.0",
+        "@tiptap/pm": "^3.32.0",
+        "@tiptap/react": "^3.32.0",
+        "@tiptap/starter-kit": "^3.32.0",
         "@types/react": "^19.3.0",
         "@types/react-dom": "^19.3.0",
         "lucide-react": "^1.55.0",
+        "react-select": "^5.10.2",
         "ziggy-js": "^2.6.5"
     }
 }
