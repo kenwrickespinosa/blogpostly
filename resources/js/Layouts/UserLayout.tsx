@@ -9,12 +9,12 @@ type UserLayoutProps = {
 
 function UserLayout({ children, title }: UserLayoutProps) {
     return (
-        <div className="bg-background relative">
+        <div className="bg-white relative">
             <Head>
                 <title>{title}</title>
             </Head>
 
-            <header className="fixed z-20 w-full bg-background">
+            <header className="fixed z-20 w-full bg-white">
                 <UserTopbar />
             </header>
 

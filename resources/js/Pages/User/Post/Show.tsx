@@ -25,9 +25,9 @@ function Show() {
     }
 
     return (
-        <div className="relative min-h-dvh">
+        <div className="relative min-h-dvh w-full bg-background">
             {/* Header */}
-            <header className="bg-white py-4 fixed top-0 w-full z-20 border-b border-b-primary/40">
+            <header className="bg-background py-4 fixed top-0 w-full z-20 border-b border-b-primary/40">
                 <Link
                     href="/explore"
                     className="flex items-center w-fit mx-4 text-lg font-semibold pr-2"
@@ -38,7 +38,7 @@ function Show() {
             </header>
 
             {/* body */}
-            <main className="px-4 md:px-40 lg:px-80 bg-white pt-20 pb-10 lg:pb-20">
+            <main className="mx-auto max-w-190 px-4 pt-24 bg-background">
                 <article className="flex flex-col gap-10 lg:gap-16">
                     <div className="flex flex-col gap-4">
                         <div className="flex gap-2">
